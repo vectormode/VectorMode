@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Laravel</title>
+        <title>VectorMode</title>
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+        <!-- <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css"> -->
 
         <style>
+            @font-face {
+                font-family: "Lato";
+                src: url("{{ URL::asset('fonts/Lato-Hairline.woff') }}") format('woff');
+            }
             html, body {
                 height: 100%;
             }
@@ -16,13 +20,15 @@
                 width: 100%;
                 display: table;
                 font-weight: 100;
-                font-family: 'Lato';
+                font-family: 'Dosis';
+                color: #73879C;
+                background: #F7F7F7;
             }
 
             .container {
                 text-align: center;
                 display: table-cell;
-                vertical-align: middle;
+                /*vertical-align: middle;*/
             }
 
             .content {
@@ -31,14 +37,41 @@
             }
 
             .title {
-                font-size: 96px;
+                font-size: 180px;
+                padding-bottom: 60px;
+                margin-top: 30px;
+                font-weight: 100;
+            }
+
+            #enter {
+                font-size: 100px;
+                font-weight: 900;
+                text-decoration: none;
+                color: #73879C;
+                border: 5px solid;
+                border-radius: 10px;
+                padding: 0px 100px 10px 100px;
+            }
+
+            #trade-mark {
+                font-size: 77px;
+                vertical-align: top;
+                font-weight: 900;
+            }
+
+            #copyright {
+                font-size: 40px;
+                font-weight: 900;
+                margin-top: 80px;
             }
         </style>
     </head>
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
+                <div class="title">VectorMode<span id="trade-mark">&reg;</span></div>
+                <a id="enter" href="{{ URL::route('home') }}">Login</a>
+                <p id="copyright">&copy; {{ date('Y') }}  All rights reserved.</p>
             </div>
         </div>
     </body>

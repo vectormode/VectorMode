@@ -13,4 +13,20 @@ var elixir = require('laravel-elixir');
 
 elixir(function(mix) {
     mix.sass('app.scss');
+    mix.scripts([
+		'top.js',
+		'sweetalert.min.js',
+		'jquery-ui.js'
+    ], 'public/js/top.js');
+    mix.scripts([
+		'jquery.nicescroll.min.js',
+		'icheck.min.js',
+		'jquery.dataTables.js',
+		'dataTables.tableTools.js',
+		'validator.js',
+		'moment.min2.js',
+		'daterangepicker.js',
+		'select2.full.js',
+		'custom.js',
+    ], 'public/js/bottom.js');
 });
