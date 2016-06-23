@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>tCableBilling</title>
+    <title>VectorMode</title>
 
     <!-- Bootstrap core CSS -->
 
@@ -47,13 +47,15 @@
             @include('partials._topnav')
             <!-- page content -->
             <div class="right_col" role="main">
-            @yield('content')
+                
+                @yield('content')
+                
                 <!-- footer content -->
                 <footer class="footer">
                     <div class="">
                         <p id="bottom-copyright" class="pull-left">©{{date('Y')}} All Rights Reserved.</p>
-                        <p class="pull-right"><span class="lead"><i class="fa fa-globe"></i> tCableBilling<span id="reg">&reg;</span></span> is an automated cable network billing system. Developed by <a>Khan Mohammad Rashedun-Naby</a>. |
-                            <span class="lead"> <i class="fa fa-globe"></i> tCableBilling<span id="reg">&reg;</span></span>
+                        <p class="pull-right"><span class="lead"><i class="fa fa-globe"></i> VectorMode<span id="reg">&reg;</span></span> is an automated cable network billing system. Developed by <a>Khan Mohammad Rashedun-Naby</a>.
+                            <span class="lead"> <i class="fa fa-globe"></i> VectorMode<span id="reg">&reg;</span></span>
                         </p>
                     </div>
                     <div class="clearfix"></div>

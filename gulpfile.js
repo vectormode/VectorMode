@@ -14,7 +14,8 @@ var elixir = require('laravel-elixir');
 elixir(function(mix) {
     mix.sass('app.scss');
     mix.scripts([
-		'top.js',
+		'jquery-3.0.0.js',
+		'bootstrap.min.js',
 		'sweetalert.min.js',
 		'jquery-ui.js'
     ], 'public/js/top.js');

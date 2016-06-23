@@ -37,7 +37,7 @@
             }
 
             .title {
-                font-size: 180px;
+                font-size: 150px;
                 padding-bottom: 60px;
                 margin-top: 30px;
                 font-weight: 100;
@@ -45,7 +45,7 @@
 
             #enter {
                 font-size: 100px;
-                font-weight: 900;
+                font-weight: 100;
                 text-decoration: none;
                 color: #73879C;
                 border: 5px solid;
@@ -70,7 +70,7 @@
         <div class="container">
             <div class="content">
                 <div class="title">VectorMode<span id="trade-mark">&reg;</span></div>
-                <a id="enter" href="{{ URL::route('home') }}">Login</a>
+                <a id="enter" href="{{ URL::route('getLogin') }}">Login</a>
                 <p id="copyright">&copy; {{ date('Y') }}  All rights reserved.</p>
             </div>
         </div>

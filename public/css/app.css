@@ -12596,6 +12596,12 @@ body.stop-scrolling {
     opacity: 0;
     transform: translateY(145%); } }
 
+body {
+  font-family: Source Sans Pro; }
+
+.site_title {
+  font-family: Dosis; }
+
 .left_col {
   background: #2A3F54; }
 
@@ -12691,7 +12697,7 @@ body.stop-scrolling {
   margin-bottom: 35px; }
 
 .menu_section h3 {
-  padding-left: 23px;
+  padding-left: 10px;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: .5px;
@@ -12720,7 +12726,7 @@ body.stop-scrolling {
 
 .profile_info {
   padding: 25px 10px 10px;
-  width: 65%;
+  width: 100%;
   float: left; }
 
 .profile_info span {
@@ -12787,7 +12793,7 @@ body.stop-scrolling {
 .nav-md .container.body .col-md-3.left_col {
   width: 230px;
   padding: 0;
-  position: absolute;
+  position: fixed;
   display: -ms-flexbox;
   display: flex;
   z-index: 9999; }
@@ -13267,13 +13273,6 @@ footer {
   padding: 15px 20px;
   display: block; }
 
-@media (min-width: 768px) {
-  footer {
-    margin-left: 230px; } }
-
-.nav-sm footer {
-  margin-left: 70px; }
-
 .footer_fixed footer {
   position: fixed;
   left: 0px;
@@ -13412,6 +13411,7 @@ h2 {
   position: relative;
   width: 100%;
   margin-bottom: 10px;
+  margin-top: 45px;
   padding: 10px 17px;
   display: inline-block;
   background: #fff;
@@ -13420,7 +13420,8 @@ h2 {
   -moz-column-break-inside: avoid;
   column-break-inside: avoid;
   opacity: 1;
-  transition: all .2s ease; }
+  transition: all .2s ease;
+  min-height: 80vh; }
 
 .x_title {
   border-bottom: 2px solid #E6E9ED;
@@ -16786,5 +16787,37 @@ ul.notifications {
 #wrapper {
   width: 350px;
   margin: 5% auto; }
+
+.btn {
+  border-radius: 0px;
+  margin-right: 0; }
+
+span#reg {
+  font-size: 13px;
+  vertical-align: top; }
+
+i.fa.fa-globe {
+  border: 1px solid;
+  padding: 5px 6px;
+  border-radius: 50%; }
+
+footer .pull-right {
+  font-size: 15px;
+  font-family: Dosis; }
+
+p#bottom-copyright {
+  font-size: 14px;
+  vertical-align: bottom;
+  margin-top: 8px; }
+
+.site_title #reg {
+  position: absolute;
+  top: -7px; }
+
+h1.brand-tcablebilling {
+  font-family: Dosis !important; }
+
+h1.brand-tcablebilling #reg {
+  font-size: 20px !important; }
 
 /*# sourceMappingURL=app.css.map */
