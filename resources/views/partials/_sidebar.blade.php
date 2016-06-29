@@ -24,7 +24,11 @@
         <ul class="nav side-menu">
             <li><a><i class="fa fa-home"></i> Dashboard <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu" style="display: none">
-                    <li><a href="{{ URL::route('products.index') }}">Products</a>
+                    <li>
+                        <a href="{{ URL::route('products.index') }}">Products</a>
+                    </li>
+                    <li>
+                        <a href="{{ URL::route('customers.index') }}">Customers</a>
                     </li>
                 </ul>
             </li>
