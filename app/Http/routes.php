@@ -12,6 +12,7 @@
 */
 Route::group(['middleware' => 'auth'], function(){
 	Route::resource('/products', 'ProductsController');
+	Route::resource('/customers', 'CustomersController');
 });
 // Authentication routes...
 Route::get( '/', function(){
