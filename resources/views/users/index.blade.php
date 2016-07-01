@@ -15,13 +15,13 @@
 
                                 </div>
                                 <div class="col-sm-4 col-xs-12 add-new-buttons">
-                                    <a href="{{ URL::route('customers.create') }}" title="" class="btn btn-success btn-sm pull-right">
-                                        Add New Customer
+                                    <a href="{{ URL::route('users.create') }}" title="" class="btn btn-success btn-sm pull-right">
+                                        Add New User
                                     </a>
                                 </div>
                             </div>
                             <div class="table-responsive">
-                                <table id="customersall" class="table table-striped responsive-utilities jambo_table">
+                                <table id="usersall" class="table table-striped responsive-utilities jambo_table">
                                     <thead>
                                     <tr class="headings">
                                         <th>
@@ -29,30 +29,34 @@
                                         </th>
                                         <th>ID</th>
                                         <th>Name</th>
-                                        <th>Created At</th>
-                                        <th>Updated At</th>
+                                        <th>Phone</th>
+                                        <th>Address</th>
                                         <th class=" no-link last"><span class="nobr" width="20%">Action</span>
                                         </th>
                                     </tr>
                                     </thead>
 
                                     <tbody>
-                                    @foreach($customers as $customer)
-                                        @if ($customer->id % 2 == 0)
+                                    @foreach($users as $user)
+                                        @if ($user->id % 2 == 0)
                                             <tr class="even pointer">
                                                 <td class="a-center ">
                                                     <input type="checkbox" class="tableflat" disabled readonly>
                                                 </td>
-                                                <td class=" ">{{sprintf("%'.05d\n", $customer->id)}} </td>
+                                                <td class=" ">{{sprintf("%'.05d\n", $user->id)}} </td>
                                                 <td class=" ">
-                                                    {{$customer->name}}
+                                                    {{$user->name}}
                                                 </td>
-                                                <td class=" ">{{ date('F d, Y', strtotime($customer->created_at)) }}</td>
-                                                <td class=" ">{{ date('F d, Y', strtotime($customer->updated_at)) }}</td>
+                                                <td class=" ">
+                                                    {{$user->phone}}
+                                                </td>
+                                                <td class=" ">
+                                                    {{$user->address}}
+                                                </td>
                                                 <td class=" last">
-                                                    {!! Form::open(array('route' => array('customers.destroy', $customer->id), 'method' => 'delete', 'id'=>'delete')) !!}
+                                                    {!! Form::open(array('route' => array('users.destroy', $user->id), 'method' => 'delete', 'id'=>'delete')) !!}
                                                     {!! Form::close() !!}
-                                                    <a href="/customers/{{$customer->id}}/edit" class="btn btn-sm btn-success">Edit</a>
+                                                    <a href="/users/{{$user->id}}/edit" class="btn btn-sm btn-success">Edit</a>
                                                     <button class="btn btn-danger btn-sm delete">Delete</button>
                                                 </td>
 
@@ -62,16 +66,20 @@
                                                 <td class="a-center ">
                                                     <input type="checkbox" class="tableflat" disabled readonly>
                                                 </td>
-                                                <td class=" ">{{sprintf("%'.05d\n", $customer->id)}} </td>
+                                                <td class=" ">{{sprintf("%'.05d\n", $user->id)}} </td>
                                                 <td class=" ">
-                                                    {{$customer->name}}
+                                                    {{$user->name}}
                                                 </td>
-                                                <td class=" ">{{ date('F d, Y', strtotime($customer->created_at)) }}</td>
-                                                <td class=" ">{{ date('F d, Y', strtotime($customer->updated_at)) }}</td>
+                                                <td class=" ">
+                                                    {{$user->phone}}
+                                                </td>
+                                                <td class=" ">
+                                                    {{$user->address}}
+                                                </td>
                                                 <td class=" last">
-                                                    {!! Form::open(array('route' => array('customers.destroy', $customer->id), 'method' => 'delete', 'id'=>'delete')) !!}
+                                                    {!! Form::open(array('route' => array('users.destroy', $user->id), 'method' => 'delete', 'id'=>'delete')) !!}
                                                     {!! Form::close() !!}
-                                                    <a href="/customers/{{$customer->id}}/edit" class="btn btn-sm btn-success">Edit</a>
+                                                    <a href="/users/{{$user->id}}/edit" class="btn btn-sm btn-success">Edit</a>
                                                     <button class="btn btn-danger btn-sm delete">Delete</button>
                                                 </td>
 
@@ -81,7 +89,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            {{-- {!! $customers->render() !!} --}}
+                            {{-- {!! $users->render() !!} --}}
                         </div>
                     </div>
                 </div>
@@ -93,7 +101,7 @@
             </div>
             <script type="text/javascript" charset="utf-8" async defer>
                 jQuery(document).ready(function($) {
-                    var oTable = $('#customersall').dataTable({
+                    var oTable = $('#usersall').dataTable({
                         "oLanguage": {
                             "sSearch": "Search all columns:"
                         },

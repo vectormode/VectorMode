@@ -10,8 +10,8 @@
                     <div class="x_panel">
 
                         <div class="x_content">
-                            {!! Form::model($customer, ['route'=>['customers.update', $customer->id], 'method'=>'patch','class'=>'form-horizontal form-label-left']) !!}
-                                @include('partials._customer_form')
+                            {!! Form::model($supplier, ['route'=>['suppliers.update', $supplier->id], 'method'=>'patch','class'=>'form-horizontal form-label-left']) !!}
+                                @include('partials._supplier_form')
                             {!! Form::close() !!}
                         </div>
                     </div>

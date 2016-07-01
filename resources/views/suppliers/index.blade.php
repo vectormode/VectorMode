@@ -15,13 +15,13 @@
 
                                 </div>
                                 <div class="col-sm-4 col-xs-12 add-new-buttons">
-                                    <a href="{{ URL::route('customers.create') }}" title="" class="btn btn-success btn-sm pull-right">
-                                        Add New Customer
+                                    <a href="{{ URL::route('suppliers.create') }}" title="" class="btn btn-success btn-sm pull-right">
+                                        Add New Supplier
                                     </a>
                                 </div>
                             </div>
                             <div class="table-responsive">
-                                <table id="customersall" class="table table-striped responsive-utilities jambo_table">
+                                <table id="suppliersall" class="table table-striped responsive-utilities jambo_table">
                                     <thead>
                                     <tr class="headings">
                                         <th>
@@ -37,22 +37,22 @@
                                     </thead>
 
                                     <tbody>
-                                    @foreach($customers as $customer)
-                                        @if ($customer->id % 2 == 0)
+                                    @foreach($suppliers as $supplier)
+                                        @if ($supplier->id % 2 == 0)
                                             <tr class="even pointer">
                                                 <td class="a-center ">
                                                     <input type="checkbox" class="tableflat" disabled readonly>
                                                 </td>
-                                                <td class=" ">{{sprintf("%'.05d\n", $customer->id)}} </td>
+                                                <td class=" ">{{sprintf("%'.05d\n", $supplier->id)}} </td>
                                                 <td class=" ">
-                                                    {{$customer->name}}
+                                                    {{$supplier->name}}
                                                 </td>
-                                                <td class=" ">{{ date('F d, Y', strtotime($customer->created_at)) }}</td>
-                                                <td class=" ">{{ date('F d, Y', strtotime($customer->updated_at)) }}</td>
+                                                <td class=" ">{{ date('F d, Y', strtotime($supplier->created_at)) }}</td>
+                                                <td class=" ">{{ date('F d, Y', strtotime($supplier->updated_at)) }}</td>
                                                 <td class=" last">
-                                                    {!! Form::open(array('route' => array('customers.destroy', $customer->id), 'method' => 'delete', 'id'=>'delete')) !!}
+                                                    {!! Form::open(array('route' => array('suppliers.destroy', $supplier->id), 'method' => 'delete', 'id'=>'delete')) !!}
                                                     {!! Form::close() !!}
-                                                    <a href="/customers/{{$customer->id}}/edit" class="btn btn-sm btn-success">Edit</a>
+                                                    <a href="/suppliers/{{$supplier->id}}/edit" class="btn btn-sm btn-success">Edit</a>
                                                     <button class="btn btn-danger btn-sm delete">Delete</button>
                                                 </td>
 
@@ -62,16 +62,16 @@
                                                 <td class="a-center ">
                                                     <input type="checkbox" class="tableflat" disabled readonly>
                                                 </td>
-                                                <td class=" ">{{sprintf("%'.05d\n", $customer->id)}} </td>
+                                                <td class=" ">{{sprintf("%'.05d\n", $supplier->id)}} </td>
                                                 <td class=" ">
-                                                    {{$customer->name}}
+                                                    {{$supplier->name}}
                                                 </td>
-                                                <td class=" ">{{ date('F d, Y', strtotime($customer->created_at)) }}</td>
-                                                <td class=" ">{{ date('F d, Y', strtotime($customer->updated_at)) }}</td>
+                                                <td class=" ">{{ date('F d, Y', strtotime($supplier->created_at)) }}</td>
+                                                <td class=" ">{{ date('F d, Y', strtotime($supplier->updated_at)) }}</td>
                                                 <td class=" last">
-                                                    {!! Form::open(array('route' => array('customers.destroy', $customer->id), 'method' => 'delete', 'id'=>'delete')) !!}
+                                                    {!! Form::open(array('route' => array('suppliers.destroy', $supplier->id), 'method' => 'delete', 'id'=>'delete')) !!}
                                                     {!! Form::close() !!}
-                                                    <a href="/customers/{{$customer->id}}/edit" class="btn btn-sm btn-success">Edit</a>
+                                                    <a href="/suppliers/{{$supplier->id}}/edit" class="btn btn-sm btn-success">Edit</a>
                                                     <button class="btn btn-danger btn-sm delete">Delete</button>
                                                 </td>
 
@@ -81,7 +81,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            {{-- {!! $customers->render() !!} --}}
+                            {{-- {!! $suppliers->render() !!} --}}
                         </div>
                     </div>
                 </div>
@@ -93,7 +93,7 @@
             </div>
             <script type="text/javascript" charset="utf-8" async defer>
                 jQuery(document).ready(function($) {
-                    var oTable = $('#customersall').dataTable({
+                    var oTable = $('#suppliersall').dataTable({
                         "oLanguage": {
                             "sSearch": "Search all columns:"
                         },

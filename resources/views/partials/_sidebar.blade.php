@@ -30,6 +30,12 @@
                     <li>
                         <a href="{{ URL::route('customers.index') }}">Customers</a>
                     </li>
+                    <li>
+                        <a href="{{ URL::route('suppliers.index') }}">Suppliers</a>
+                    </li>
+                    <li>
+                        <a href="{{ URL::route('stores.index') }}">Stores</a>
+                    </li>
                 </ul>
             </li>
         </ul>
