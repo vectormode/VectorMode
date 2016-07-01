@@ -10,9 +10,15 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-Route::group(['middleware' => 'auth'], function(){
+Route::group(['middleware' => 'auth'], function() {
+
 	Route::resource('/products', 'ProductsController');
 	Route::resource('/customers', 'CustomersController');
+	Route::resource('/users', 'UsersController');
+	Route::resource('/suppliers', 'SuppliersController');
+
+	Route::get('/db-backup', array('as' => 'db-backup', 'uses' => 'UsersController@dbBackup'));
+
 });
 // Authentication routes...
 Route::get( '/', function(){
