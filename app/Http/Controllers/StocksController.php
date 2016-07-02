@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Store;
+use App\Models\Supplier;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -28,7 +31,44 @@ class StocksController extends Controller
      */
     public function create()
     {
-        return view('stocks.create');
+
+        /*
+         * Getting all product names and ids in one array
+         */
+
+        $products = Product::all();
+
+        $product_names = [];
+
+        foreach ($products as $product) {
+            $product_names[$product->id] = $product->name;
+        }
+
+
+        /*
+         * Getting all supplier names and ids in one array
+         */
+        $suppliers = Supplier::all();
+
+        $supplier_names = [];
+
+        foreach ($suppliers as $supplier) {
+            $supplier_names[$supplier->id] = $supplier->name;
+        }
+
+        /*
+         * Getting all store names and ids in one array
+         */
+        $stores = Store::all();
+
+        $store_names = [];
+
+        foreach ($stores as $store) {
+            $store_names[$store->id] = $store->name;
+        }
+
+        return view('stocks.create', compact('product_names', 'supplier_names', 'store_names'));
+
     }
 
     /**
@@ -37,7 +77,7 @@ class StocksController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function stock(Stock $stock, Request $request)
+    public function store(Stock $stock, Request $request)
     {
         $stock->create($request->all());
         \Alert::success('Your requested stock has been created.', 'Stock Created !');
@@ -64,7 +104,43 @@ class StocksController extends Controller
     public function edit($id)
     {
         $stock = Stock::findOrFail($id);
-        return view('stocks.edit', compact('stock'));
+
+        /*
+         * Getting all product names and ids in one array
+         */
+
+        $products = Product::all();
+
+        $product_names = [];
+
+        foreach ($products as $product) {
+            $product_names[$product->id] = $product->name;
+        }
+
+
+        /*
+         * Getting all supplier names and ids in one array
+         */
+        $suppliers = Supplier::all();
+
+        $supplier_names = [];
+
+        foreach ($suppliers as $supplier) {
+            $supplier_names[$supplier->id] = $supplier->name;
+        }
+
+        /*
+         * Getting all store names and ids in one array
+         */
+        $stores = Store::all();
+
+        $store_names = [];
+
+        foreach ($stores as $store) {
+            $store_names[$store->id] = $store->name;
+        }
+
+        return view('stocks.edit', compact('stock', 'product_names', 'supplier_names', 'store_names'));
     }
 
     /**
