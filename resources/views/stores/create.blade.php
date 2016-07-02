@@ -10,8 +10,8 @@
                     <div class="x_panel">
 
                         <div class="x_content">
-                            {!! Form::open(['url'=>'/suppliers','class'=>'form-horizontal form-label-left']) !!}
-                                @include('partials._supplier_form')
+                            {!! Form::open(['url'=>'/stores','class'=>'form-horizontal form-label-left']) !!}
+                                @include('partials._store_form')
                             {!! Form::close() !!}
                         </div>
                     </div>
