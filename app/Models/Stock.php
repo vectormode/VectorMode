@@ -15,15 +15,21 @@ class Stock extends Model
         'retail_price'
     ];
 
-
+    /*
+     * Get product details
+     */
     public function product_details(){
         return $this->belongsTo('App\Models\Product');
     }
-
+    /*
+     * Get supplier details
+     */
     public function supplier_details(){
         return $this->belongsTo('App\Models\Supplier');
     }
-
+    /*
+     * Get store details
+     */
     public function store_details(){
         return $this->belongsTo('App\Models\Store');
     }

@@ -11,8 +11,8 @@ class Product extends Model
     /**
      * Get the comments for the blog post.
      */
-    public function store_details()
-    {
-        return $this->hasMany('App\Models\Store');
+
+    public function stock_details(){
+        return $this->hasMany('App\Models\Stock');
     }
 }
