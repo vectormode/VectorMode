@@ -13,6 +13,6 @@ class Product extends Model
      */
 
     public function stock_details(){
-        return $this->hasMany('App\Models\Stock');
+        return $this->hasMany('App\Models\Stock', 'id');
     }
 }

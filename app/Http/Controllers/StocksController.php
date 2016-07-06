@@ -5,11 +5,12 @@ namespace App\Http\Controllers;
 use App\Models\Store;
 use App\Models\Supplier;
 use App\Models\Product;
+use App\Models\Stock;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-use App\Models\Stock;
+use Illuminate\Support\Facades\Input;
 
 class StocksController extends Controller
 {
@@ -153,7 +154,7 @@ class StocksController extends Controller
     public function update(Request $request, $id)
     {
         $stock = Stock::findOrFail($id);
-        $stock->fill(\Input::all());
+        $stock->fill(Input::all());
         $stock->save();
         \Alert::success('Your requested stock info has been updated.', 'Stock Info Updated !');
         return \Redirect::to('/stocks');

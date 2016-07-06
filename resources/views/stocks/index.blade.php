@@ -29,8 +29,12 @@
                                         </th>
                                         <th>ID</th>
                                         <th>Name</th>
-                                        <th>Created At</th>
-                                        <th>Updated At</th>
+                                        <th>Supplier</th>
+                                        <th>Store</th>
+                                        <th>Purchase Price</th>
+                                        <th>Retail Price</th>
+                                        <th>Quantity</th>
+                                        <th>Date</th>
                                         <th class=" no-link last"><span class="nobr" width="20%">Action</span>
                                         </th>
                                     </tr>
@@ -45,10 +49,14 @@
                                                 </td>
                                                 <td class=" ">{{sprintf("%'.05d\n", $stock->id)}} </td>
                                                 <td class=" ">
-                                                    {{$stock->name}}
+                                                    {{ $stock->product_details->name }}
                                                 </td>
+                                                <td class=" ">{{ $stock->supplier_details->name }}</td>
+                                                <td class=" ">{{ $stock->store_details->name }}</td>
+                                                <td class=" ">{{ $stock->purchase_price }}</td>
+                                                <td class=" ">{{ $stock->retail_price }}</td>
+                                                <td class=" ">{{ $stock->qty }}</td>
                                                 <td class=" ">{{ date('F d, Y', strtotime($stock->created_at)) }}</td>
-                                                <td class=" ">{{ date('F d, Y', strtotime($stock->updated_at)) }}</td>
                                                 <td class=" last">
                                                     {!! Form::open(array('route' => array('stocks.destroy', $stock->id), 'method' => 'delete', 'id'=>'delete')) !!}
                                                     {!! Form::close() !!}
@@ -64,10 +72,14 @@
                                                 </td>
                                                 <td class=" ">{{sprintf("%'.05d\n", $stock->id)}} </td>
                                                 <td class=" ">
-                                                    {{$stock->name}}
+                                                    {{ $stock->product_details->name }}
                                                 </td>
+                                                <td class=" ">{{ $stock->supplier_details->name }}</td>
+                                                <td class=" ">{{ $stock->store_details->name }}</td>
+                                                <td class=" ">{{ $stock->purchase_price }}</td>
+                                                <td class=" ">{{ $stock->retail_price }}</td>
+                                                <td class=" ">{{ $stock->qty }}</td>
                                                 <td class=" ">{{ date('F d, Y', strtotime($stock->created_at)) }}</td>
-                                                <td class=" ">{{ date('F d, Y', strtotime($stock->updated_at)) }}</td>
                                                 <td class=" last">
                                                     {!! Form::open(array('route' => array('stocks.destroy', $stock->id), 'method' => 'delete', 'id'=>'delete')) !!}
                                                     {!! Form::close() !!}

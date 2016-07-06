@@ -19,18 +19,18 @@ class Stock extends Model
      * Get product details
      */
     public function product_details(){
-        return $this->belongsTo('App\Models\Product');
+        return $this->belongsTo('App\Models\Product', 'product_id');
     }
     /*
      * Get supplier details
      */
     public function supplier_details(){
-        return $this->belongsTo('App\Models\Supplier');
+        return $this->belongsTo('App\Models\Supplier', 'supplier_id');
     }
     /*
      * Get store details
      */
     public function store_details(){
-        return $this->belongsTo('App\Models\Store');
+        return $this->belongsTo('App\Models\Store', 'store_id');
     }
 }
