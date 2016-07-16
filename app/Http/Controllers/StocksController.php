@@ -21,7 +21,7 @@ class StocksController extends Controller
      */
     public function index()
     {
-        $stocks = Stock::all();
+        $stocks = Stock::with('store_details', 'supplier_details', 'product_details')->get();
         return view('stocks.index', compact('stocks', 'stocks'));
     }
 

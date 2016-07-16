@@ -28,6 +28,9 @@
                         <a href="{{ URL::route('products.index') }}">Products</a>
                     </li>
                     <li>
+                        <a href="{{ URL::route('orders.index') }}">Orders</a>
+                    </li>
+                    <li>
                         <a href="{{ URL::route('customers.index') }}">Customers</a>
                     </li>
                     <li>

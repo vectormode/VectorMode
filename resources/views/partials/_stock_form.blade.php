@@ -3,19 +3,19 @@
 <div class="item form-group">
     {!! Form::label('product_id', 'Select Product', array('class' => 'control-label col-md-3 col-sm-3 col-xs-12'));!!}
     <div class="col-md-6 col-sm-6 col-xs-12">
-        {!! Form::select('product_id', $product_names, null, ['class'=>'form-control col-md-7 col-xs-12', 'placeholder' => 'Select Product...'])!!}
+        {!! Form::select('product_id', $product_names, null, ['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required', 'placeholder' => 'Select Product...'])!!}
     </div>
 </div>
 <div class="item form-group">
     {!! Form::label('supplier_id', 'Select Supplier', array('class' => 'control-label col-md-3 col-sm-3 col-xs-12'));!!}
     <div class="col-md-6 col-sm-6 col-xs-12">
-        {!! Form::select('supplier_id', $supplier_names, null, ['class'=>'form-control col-md-7 col-xs-12', 'placeholder' => 'Select Supplier...'])!!}
+        {!! Form::select('supplier_id', $supplier_names, null, ['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required', 'placeholder' => 'Select Supplier...'])!!}
     </div>
 </div>
 <div class="item form-group">
     {!! Form::label('store_id', 'Select Store', array('class' => 'control-label col-md-3 col-sm-3 col-xs-12'));!!}
     <div class="col-md-6 col-sm-6 col-xs-12">
-        {!! Form::select('store_id', $store_names, null, ['class'=>'form-control col-md-7 col-xs-12', 'placeholder' => 'Select Store...'])!!}
+        {!! Form::select('store_id', $store_names, null, ['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required','placeholder' => 'Select Store...'])!!}
     </div>
 </div>
 <div class="item form-group">

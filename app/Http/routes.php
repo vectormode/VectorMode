@@ -17,7 +17,8 @@ Route::group(['middleware' => 'auth'], function() {
 	Route::resource('/users', 'UsersController');
 	Route::resource('/suppliers', 'SuppliersController');
 	Route::resource('/stores', 'StoresController');
-	Route::resource('/stocks', 'StocksController');
+    Route::resource('/stocks', 'StocksController');
+    Route::resource('/orders', 'OrdersController');
 
 	Route::get('/db-backup', array('as' => 'db-backup', 'uses' => 'UsersController@dbBackup'));
 
