@@ -424,12 +424,12 @@ Vue.filter('currencyDisplay', {
     // model -> view
     read: function (val) {
         if (val > 0) {
-            return accounting.formatMoney(val, "$", 2, ".", ",");
+            return accounting.formatMoney(val, { symbol: "BDT",  format: "%v %s" } );
         }
     },
     // view -> model
     write: function (val, oldVal) {
-        return accounting.unformat(val, ",");
+        return accounting.unformat(val);
     }
 });
 
@@ -462,15 +462,15 @@ Vue.directive('sortable', {
 var vm = new Vue({
     el: '#app',
     data: {
-        rows: [
-            //initial data
-            {qty: 5, description: "Something", price: 55.20, tax: 10},
-            {qty: 2, description: "Something else", price: 1255.20, tax: 20},
-        ],
-        total: 0,
-        grandtotal: 0,
-        taxtotal: 0,
-        delivery: 40
+            rows: [
+                //initial data
+                {qty: 5, description: [{index: '1', text: 'First App'}, {index: '2', text: 'Second App'}, {index: '3', text: 'Third App'}], price: 55.20, tax: 10},
+                {qty: 2, description: [{index: '4', text: 'Fourth App'}, {index: '5', text: 'Fifth App'}, {index: '6', text: 'Sixth App'}], price: 1255.20, tax: 20},
+            ],
+            total: 0,
+            grandtotal: 0,
+            taxtotal: 0,
+            delivery: 40
     },
     computed: {
         total: function () {
@@ -479,13 +479,6 @@ var vm = new Vue({
                 t += accounting.unformat(e.total, ",");
             });
             return t;
-        },
-        taxtotal: function () {
-            var tt = 0;
-            $.each(this.rows, function (i, e) {
-                tt += accounting.unformat(e.tax_amount, ",");
-            });
-            return tt;
         }
     },
     methods: {

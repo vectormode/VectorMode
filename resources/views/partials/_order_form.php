@@ -6,7 +6,6 @@
             <th>Description</th>
             <th style="width: 80px;">Qty</th>
             <th style="width: 130px;" class="text-right">Price</th>
-            <th style="width: 90px;">Tax</th>
             <th style="width: 130px;">Total</th>
             <th style="width: 130px;"></th>
         </tr>
@@ -17,7 +16,11 @@
                 {{ $index +1 }}
             </td>
             <td>
-                <input class="form-control" v-model="row.description"/>
+                <select v-model="selected">
+                    <option v-for="option in row.description" v-bind:value="option.index">
+                        {{ option.text }}
+                    </option>
+                </select>
             </td>
             <td>
                 <input class="form-control" v-model="row.qty" number/>
@@ -26,15 +29,7 @@
                 <input class="form-control text-right" v-model="row.price | currencyDisplay" number data-type="currency"/>
             </td>
             <td>
-                <select class="form-control" v-model="row.tax">
-                    <option value="0">0%</option>
-                    <option value="10">10%</option>
-                    <option value="20">20%</option>
-                </select>
-            </td>
-            <td>
                 <input class="form-control text-right" :value="row.qty * row.price | currencyDisplay" v-model="row.total | currencyDisplay" number readonly />
-                <input type="hidden" :value="row.qty * row.price * row.tax / 100" v-model="row.tax_amount | currencyDisplay" number/>
             </td>
             <td>
                 <a class="btn btn-primary btn-xs" @click="addRow($index)">+</a>
@@ -44,22 +39,17 @@
         </tbody>
         <tfoot>
         <tr>
-            <td colspan="5" class="text-right">TAX</td>
-            <td colspan="1" class="text-right">{{ taxtotal | currencyDisplay }}</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td colspan="5" class="text-right">TOTAL</td>
+            <td colspan="4" class="text-right">TOTAL</td>
             <td colspan="1" class="text-right">{{ total | currencyDisplay }}</td>
             <td></td>
         </tr>
         <tr>
-            <td colspan="5" class="text-right">DELIVERY</td>
+            <td colspan="4" class="text-right" style="vertical-align: middle">DELIVERY</td>
             <td colspan="1" class="text-right"><input class="form-control text-right" v-model="delivery | currencyDisplay" number/></td>
             <td></td>
         </tr>
         <tr>
-            <td colspan="5" class="text-right"><strong>GRANDTOTAL</strong></td>
+            <td colspan="4" class="text-right"><strong>GRANDTOTAL</strong></td>
             <td colspan="1" class="text-right"><strong>{{ grandtotal = total + delivery | currencyDisplay }}</strong></td>
             <td></td>
         </tr>

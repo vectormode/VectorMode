@@ -76,6 +76,7 @@
     </div>
 
     <script type="text/javascript" src="{{ URL::asset('js/bottom.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/0.9.3/vue-resource.min.js"></script>"
 </body>
 
 </html>
