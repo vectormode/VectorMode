@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Order;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -16,7 +17,8 @@ class OrdersController extends Controller
      */
     public function index()
     {
-        return view('orders.index');
+        $orders = Order::all();
+        return view('orders.index', compact('orders'));
     }
 
     /**
@@ -37,10 +39,28 @@ class OrdersController extends Controller
      */
     public function store(Request $request)
     {
-        $input = Input::get();
-        echo '<pre>';
-        print_r($input->name->rows);
-        echo '</pre>';
+        $input = $request->all();
+        $order = new Order;
+        $order->customer_id = $input['customer_id'];
+        $order->customer_name = $input['customer_name'];
+        $order->customer_phone = $input['customer_phone'];
+        $order->customer_address = $input['customer_address'];
+        $order->total = $input['total'];
+        $order->grandtotal_vat = $input['grandtotal_vat'];
+        $order->delivery = $input['delivery'];
+        $order->grandtotal = $input['grandtotal'];
+        $order->save();
+        foreach ($input['rows'] as $key => $value){
+            $order->products()->attach(
+                $input['product'][$key],
+                [
+                    'price'             => $input['price'][$key],
+                    'qty'               => $input['qty'][$key],
+                    'vat'               => $input['vat'][$key],
+                    'row_total_price'   => $input['row_total_price'][$key]
+                ]
+            );
+        }
     }
 
     /**
