@@ -1,27 +1,77 @@
-# Laravel PHP Framework
+<p align="center">
+  <img src="https://raw.githubusercontent.com/hillelcoren/invoice-ninja/master/public/images/round_logo.png" alt="Sublime's custom image"/>
+</p>
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+# Invoice Ninja
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+[![Build Status](https://travis-ci.org/invoiceninja/invoiceninja.svg?branch=master)](https://travis-ci.org/invoiceninja/invoiceninja)
+[![Join the chat at https://gitter.im/hillelcoren/invoice-ninja](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/hillelcoren/invoice-ninja?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+## [Hosted](https://www.invoiceninja.com) | [Self-hosted](https://invoiceninja.org)
 
-## Official Documentation
+We're often asked to recommend Laravel/PHP developers to help setup our app and make small adjustments, email us at contact@invoiceninja.com if you're interested in taking on the work.
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+## Affiliates Programs
+* Referral program (we pay you): $100 per signup paid over 3 years - [Learn more](https://www.invoiceninja.com/referral-program/)
+* White-label reseller (you pay us): 10% of revenue with a $500 sign up fee
+
+### Installation Options
+* [Self-Host Zip](https://www.invoiceninja.com/knowledgebase/self-host/) - Free
+* [Docker File](https://github.com/invoiceninja/dockerfiles) - Free
+* [Bitnami](https://bitnami.com/stack/invoice-ninja) - Free
+* [Softaculous](https://www.softaculous.com/apps/ecommerce/Invoice_Ninja) - $30
+
+## Requirements
+
+* PHP >= 5.5.9
+* MCrypt PHP Extension
+* MySQL
+
+## Recommended Providers
+* [Stripe](https://stripe.com/)
+* [Postmark](https://postmarkapp.com/)
+
+## Features
+* Built using Laravel 5.2
+* Live PDF generation using [pdfmake](http://pdfmake.org/)
+* Integrates with 50+ payment providers with [Omnipay](https://github.com/thephpleague/omnipay)
+* Recurring invoices with auto-billing
+* Expenses and vendors
+* Tasks with time-tracking
+* File Attachments
+* Multi-user/multi-company support
+* Tax rates and payment terms
+* Reminder emails
+* Partial payments
+* Client portal
+* Custom email templates
+* [D3.js](http://d3js.org/) visualizations
+
+## Documentation
+* [Ubuntu and Apache](http://blog.technerdservices.com/index.php/2015/04/techpop-how-to-install-invoice-ninja-on-ubuntu-14-04/)
+* [Debian and Nginx](https://www.rosehosting.com/blog/install-invoice-ninja-on-a-debian-7-vps/)
+* [User Guide](https://www.invoiceninja.com/app-user-guide/)
+* [Developer Guide](https://www.invoiceninja.com/knowledgebase/developer-guide/)
+* [API Documentation](https://www.invoiceninja.com/api-documentation/)
+* [Support Forum](https://www.invoiceninja.com/forums/forum/support/)
+* [Feature Roadmap](https://trello.com/b/63BbiVVe/)
 
 ## Contributing
+All contributors are welcome!  
+For information on how contribute to Invoice Ninja, please see our [contributing guide](CONTRIBUTING.md).
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+## Credits
+* [Hillel Coren](https://github.com/hillelcoren)
+* [All contributors](https://github.com/invoiceninja/invoiceninja/graphs/contributors)
 
-## Security Vulnerabilities
+**Special thanks to:**
+* [Troels Liebe Bentsen](https://github.com/tlbdk)
+* [Jeramy Simpson](https://github.com/JeramyMywork) - [MyWork](https://www.mywork.com.au)
+* [Sigitas Limontas](https://lt.linkedin.com/in/sigitaslimontas)
+* [Joshua Dwire](https://github.com/joshuadwire) - [Some Techie](https://www.sometechie.com)
+* [Holger Lösken](https://github.com/codedge) - [codedge](http://codedge.de/)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
 
 ## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+Invoice Ninja is released under the Attribution Assurance License.  
+See [LICENSE](LICENSE) for details.
