@@ -2,7 +2,7 @@
   <img src="https://raw.githubusercontent.com/hillelcoren/invoice-ninja/master/public/images/round_logo.png" alt="Sublime's custom image"/>
 </p>
 
-# Invoice Ninja
+# VectorMode
 
 [![Build Status](https://travis-ci.org/invoiceninja/invoiceninja.svg?branch=master)](https://travis-ci.org/invoiceninja/invoiceninja)
 [![Join the chat at https://gitter.im/hillelcoren/invoice-ninja](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/hillelcoren/invoice-ninja?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
@@ -58,7 +58,7 @@ We're often asked to recommend Laravel/PHP developers to help setup our app and 
 
 ## Contributing
 All contributors are welcome!  
-For information on how contribute to Invoice Ninja, please see our [contributing guide](CONTRIBUTING.md).
+For information on how contribute to VectorMode, please see our [contributing guide](CONTRIBUTING.md).
 
 ## Credits
 * [Hillel Coren](https://github.com/hillelcoren)
@@ -73,5 +73,5 @@ For information on how contribute to Invoice Ninja, please see our [contributing
 
 
 ## License
-Invoice Ninja is released under the Attribution Assurance License.  
+VectorMode is released under the Attribution Assurance License.  
 See [LICENSE](LICENSE) for details.
