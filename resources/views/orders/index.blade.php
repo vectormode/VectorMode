@@ -21,79 +21,77 @@
                                 </div>
                             </div>
                             <div class="table-responsive">
-                                <table id="stocksall" class="table table-striped responsive-utilities jambo_table">
+                                <table id="ordersall" class="table table-striped responsive-utilities jambo_table">
                                     <thead>
                                     <tr class="headings">
                                         <th>
                                             <input type="checkbox" class="tableflat" disabled readonly>
                                         </th>
                                         <th>ID</th>
-                                        <th>Name</th>
-                                        <th>Supplier</th>
-                                        <th>Store</th>
-                                        <th>Purchase Price</th>
-                                        <th>Retail Price</th>
-                                        <th>Quantity</th>
+                                        <th>Customer Name</th>
+                                        <th>Address</th>
+                                        <th>Total</th>
+                                        <th>Vat</th>
+                                        <th>Delivery</th>
+                                        <th>Grandtotal</th>
                                         <th>Date</th>
                                         <th class=" no-link last"><span class="nobr" width="20%">Action</span>
                                         </th>
                                     </tr>
                                     </thead>
 
-                                    {{--<tbody>--}}
-                                    {{--@foreach($stocks as $stock)--}}
-                                        {{--@if ($stock->id % 2 == 0)--}}
-                                            {{--<tr class="even pointer">--}}
-                                                {{--<td class="a-center ">--}}
-                                                    {{--<input type="checkbox" class="tableflat" disabled readonly>--}}
-                                                {{--</td>--}}
-                                                {{--<td class=" ">{{sprintf("%'.05d\n", $stock->id)}} </td>--}}
-                                                {{--<td class=" ">--}}
-                                                    {{--{{ $stock->product_details->name }}--}}
-                                                {{--</td>--}}
-                                                {{--<td class=" ">{{ $stock->supplier_details->name }}</td>--}}
-                                                {{--<td class=" ">{{ $stock->store_details->name }}</td>--}}
-                                                {{--<td class=" ">{{ $stock->purchase_price }}</td>--}}
-                                                {{--<td class=" ">{{ $stock->retail_price }}</td>--}}
-                                                {{--<td class=" ">{{ $stock->qty }}</td>--}}
-                                                {{--<td class=" ">{{ date('F d, Y', strtotime($stock->created_at)) }}</td>--}}
-                                                {{--<td class=" last">--}}
-                                                    {{--{!! Form::open(array('route' => array('stocks.destroy', $stock->id), 'method' => 'delete', 'id'=>'delete')) !!}--}}
-                                                    {{--{!! Form::close() !!}--}}
-                                                    {{--<a href="/stocks/{{$stock->id}}/edit" class="btn btn-sm btn-success">Edit</a>--}}
-                                                    {{--<button class="btn btn-danger btn-sm delete">Delete</button>--}}
-                                                {{--</td>--}}
-
-                                            {{--</tr>--}}
-                                        {{--@else--}}
-                                            {{--<tr class="even pointer">--}}
-                                                {{--<td class="a-center ">--}}
-                                                    {{--<input type="checkbox" class="tableflat" disabled readonly>--}}
-                                                {{--</td>--}}
-                                                {{--<td class=" ">{{sprintf("%'.05d\n", $stock->id)}} </td>--}}
-                                                {{--<td class=" ">--}}
-                                                    {{--{{ $stock->product_details->name }}--}}
-                                                {{--</td>--}}
-                                                {{--<td class=" ">{{ $stock->supplier_details->name }}</td>--}}
-                                                {{--<td class=" ">{{ $stock->store_details->name }}</td>--}}
-                                                {{--<td class=" ">{{ $stock->purchase_price }}</td>--}}
-                                                {{--<td class=" ">{{ $stock->retail_price }}</td>--}}
-                                                {{--<td class=" ">{{ $stock->qty }}</td>--}}
-                                                {{--<td class=" ">{{ date('F d, Y', strtotime($stock->created_at)) }}</td>--}}
-                                                {{--<td class=" last">--}}
-                                                    {{--{!! Form::open(array('route' => array('stocks.destroy', $stock->id), 'method' => 'delete', 'id'=>'delete')) !!}--}}
-                                                    {{--{!! Form::close() !!}--}}
-                                                    {{--<a href="/stocks/{{$stock->id}}/edit" class="btn btn-sm btn-success">Edit</a>--}}
-                                                    {{--<button class="btn btn-danger btn-sm delete">Delete</button>--}}
-                                                {{--</td>--}}
-
-                                            {{--</tr>--}}
-                                        {{--@endif--}}
-                                    {{--@endforeach--}}
-                                    {{--</tbody>--}}
+                                    <tbody>
+                                    @foreach($orders as $order)
+                                        @if ($order->id % 2 == 0)
+                                            <tr class="even pointer">
+                                                <td class="a-center ">
+                                                    <input type="checkbox" class="tableflat" disabled readonly>
+                                                </td>
+                                                <td class=" ">{{sprintf("%'.05d\n", $order->id)}} </td>
+                                                <td class=" ">
+                                                    {{ $order->customer_name }}
+                                                </td>
+                                                <td class=" ">{{ $order->customer_address }}</td>
+                                                <td class=" ">{{ $order->total }}</td>
+                                                <td class=" ">{{ $order->grandtotal_vat }}</td>
+                                                <td class=" ">{{ $order->delivery }}</td>
+                                                <td class=" ">{{ $order->grandtotal }}</td>
+                                                <td class=" ">{{ date('F d, Y', strtotime($order->created_at)) }}</td>
+                                                <td class=" last">
+                                                    {!! Form::open(array('route' => array('orders.destroy', $order->id), 'method' => 'delete', 'id'=>'delete')) !!}
+                                                    {!! Form::close() !!}
+                                                    <a href="/orders/{{$order->id}}/edit" class="btn btn-sm btn-success">Edit</a>
+                                                    <button class="btn btn-danger btn-sm delete">Delete</button>
+                                                </td>
+                                            </tr>
+                                        @else
+                                            <tr class="odd pointer">
+                                                <td class="a-center ">
+                                                    <input type="checkbox" class="tableflat" disabled readonly>
+                                                </td>
+                                                <td class=" ">{{sprintf("%'.05d\n", $order->id)}} </td>
+                                                <td class=" ">
+                                                    {{ $order->customer_name }}
+                                                </td>
+                                                <td class=" ">{{ $order->customer_address }}</td>
+                                                <td class=" ">{{ $order->total }}</td>
+                                                <td class=" ">{{ $order->grandtotal_vat }}</td>
+                                                <td class=" ">{{ $order->delivery }}</td>
+                                                <td class=" ">{{ $order->grandtotal }}</td>
+                                                <td class=" ">{{ date('F d, Y', strtotime($order->created_at)) }}</td>
+                                                <td class=" last">
+                                                    {!! Form::open(array('route' => array('orders.destroy', $order->id), 'method' => 'delete', 'id'=>'delete')) !!}
+                                                    {!! Form::close() !!}
+                                                    <a href="/orders/{{$order->id}}/edit" class="btn btn-sm btn-success">Edit</a>
+                                                    <button class="btn btn-danger btn-sm delete">Delete</button>
+                                                </td>
+                                            </tr>
+                                        @endif
+                                    @endforeach
+                                    </tbody>
                                 </table>
                             </div>
-                            {{-- {!! $stocks->render() !!} --}}
+                            {{-- {!! $orders->render() !!} --}}
                         </div>
                     </div>
                 </div>
@@ -105,7 +103,7 @@
             </div>
             <script type="text/javascript" charset="utf-8" async defer>
                 jQuery(document).ready(function($) {
-                    var oTable = $('#stocksall').dataTable({
+                    var oTable = $('#ordersall').dataTable({
                         "oLanguage": {
                             "sSearch": "Search all columns:"
                         },

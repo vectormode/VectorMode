@@ -15,23 +15,23 @@
 
                                 </div>
                                 <div class="col-sm-4 col-xs-12 add-new-buttons">
-                                    <a href="{{ URL::route('orders.create') }}" title="" class="btn btn-success btn-sm pull-right">
+                                    <a href="{{ URL::route('refunds.create') }}" title="" class="btn btn-success btn-sm pull-right">
                                         New Order
                                     </a>
                                 </div>
                             </div>
                             <div class="table-responsive">
-                                <table id="ordersall" class="table table-striped responsive-utilities jambo_table">
+                                <table id="refundsall" class="table table-striped responsive-utilities jambo_table">
                                     <thead>
                                     <tr class="headings">
                                         <th>
                                             <input type="checkbox" class="tableflat" disabled readonly>
                                         </th>
                                         <th>ID</th>
+                                        <th>Order ID</th>
                                         <th>Customer Name</th>
                                         <th>Address</th>
                                         <th>Total</th>
-                                        <th>Vat</th>
                                         <th>Delivery</th>
                                         <th>Grandtotal</th>
                                         <th>Date</th>
@@ -41,26 +41,26 @@
                                     </thead>
 
                                     <tbody>
-                                    @foreach($orders as $order)
-                                        @if ($order->id % 2 == 0)
+                                    @foreach($refunds as $refund)
+                                        @if ($refund->id % 2 == 0)
                                             <tr class="even pointer">
                                                 <td class="a-center ">
                                                     <input type="checkbox" class="tableflat" disabled readonly>
                                                 </td>
-                                                <td class=" ">{{sprintf("%'.05d\n", $order->id)}} </td>
+                                                <td class=" ">{{sprintf("%'.05d\n", $refund->id)}} </td>
+                                                <td class=" ">{{sprintf("%'.05d\n", $refund->order_id)}} </td>
                                                 <td class=" ">
-                                                    {{ $order->customer_name }}
+                                                    {{ $refund->customer_name }}
                                                 </td>
-                                                <td class=" ">{{ $order->customer_address }}</td>
-                                                <td class=" ">{{ $order->total }}</td>
-                                                <td class=" ">{{ $order->grandtotal_vat }}</td>
-                                                <td class=" ">{{ $order->delivery }}</td>
-                                                <td class=" ">{{ $order->grandtotal }}</td>
-                                                <td class=" ">{{ date('F d, Y', strtotime($order->created_at)) }}</td>
+                                                <td class=" ">{{ $refund->customer_address }}</td>
+                                                <td class=" ">{{ $refund->total }}</td>
+                                                <td class=" ">{{ $refund->delivery }}</td>
+                                                <td class=" ">{{ $refund->grandtotal }}</td>
+                                                <td class=" ">{{ date('F d, Y', strtotime($refund->created_at)) }}</td>
                                                 <td class=" last">
-                                                    {!! Form::open(array('route' => array('orders.destroy', $order->id), 'method' => 'delete', 'id'=>'delete')) !!}
+                                                    {!! Form::open(array('route' => array('refunds.destroy', $refund->id), 'method' => 'delete', 'id'=>'delete')) !!}
                                                     {!! Form::close() !!}
-                                                    <a href="/orders/{{$order->id}}/edit" class="btn btn-sm btn-success">Edit</a>
+                                                    <a href="/refunds/{{$refund->id}}/edit" class="btn btn-sm btn-success">Edit</a>
                                                     <button class="btn btn-danger btn-sm delete">Delete</button>
                                                 </td>
                                             </tr>
@@ -69,20 +69,20 @@
                                                 <td class="a-center ">
                                                     <input type="checkbox" class="tableflat" disabled readonly>
                                                 </td>
-                                                <td class=" ">{{sprintf("%'.05d\n", $order->id)}} </td>
+                                                <td class=" ">{{sprintf("%'.05d\n", $refund->id)}} </td>
+                                                <td class=" ">{{sprintf("%'.05d\n", $refund->order_id)}} </td>
                                                 <td class=" ">
-                                                    {{ $order->customer_name }}
+                                                    {{ $refund->customer_name }}
                                                 </td>
-                                                <td class=" ">{{ $order->customer_address }}</td>
-                                                <td class=" ">{{ $order->total }}</td>
-                                                <td class=" ">{{ $order->grandtotal_vat }}</td>
-                                                <td class=" ">{{ $order->delivery }}</td>
-                                                <td class=" ">{{ $order->grandtotal }}</td>
-                                                <td class=" ">{{ date('F d, Y', strtotime($order->created_at)) }}</td>
+                                                <td class=" ">{{ $refund->customer_address }}</td>
+                                                <td class=" ">{{ $refund->total }}</td>
+                                                <td class=" ">{{ $refund->delivery }}</td>
+                                                <td class=" ">{{ $refund->grandtotal }}</td>
+                                                <td class=" ">{{ date('F d, Y', strtotime($refund->created_at)) }}</td>
                                                 <td class=" last">
-                                                    {!! Form::open(array('route' => array('orders.destroy', $order->id), 'method' => 'delete', 'id'=>'delete')) !!}
+                                                    {!! Form::open(array('route' => array('refunds.destroy', $refund->id), 'method' => 'delete', 'id'=>'delete')) !!}
                                                     {!! Form::close() !!}
-                                                    <a href="/orders/{{$order->id}}/edit" class="btn btn-sm btn-success">Edit</a>
+                                                    <a href="/refunds/{{$refund->id}}/edit" class="btn btn-sm btn-success">Edit</a>
                                                     <button class="btn btn-danger btn-sm delete">Delete</button>
                                                 </td>
                                             </tr>
@@ -91,7 +91,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            {{-- {!! $orders->render() !!} --}}
+                            {{-- {!! $refunds->render() !!} --}}
                         </div>
                     </div>
                 </div>
@@ -103,7 +103,7 @@
             </div>
             <script type="text/javascript" charset="utf-8" async defer>
                 jQuery(document).ready(function($) {
-                    var oTable = $('#ordersall').dataTable({
+                    var oTable = $('#refundsall').dataTable({
                         "oLanguage": {
                             "sSearch": "Search all columns:"
                         },

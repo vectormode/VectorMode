@@ -10,15 +10,15 @@
                     <div class="x_panel">
 
                         <div class="x_content">
-                            {!! Form::open(['url'=>'/orders','class'=>'form-horizontal form-label-left']) !!}
+                            {!! Form::open(['url'=>'/refunds','class'=>'form-horizontal form-label-left']) !!}
 
-                                @include('partials._order_form')
+                                @include('partials._refund_form')
 
                                 <div class="ln_solid"></div>
                                 <div class="form-group">
                                     <div class="col-md-12 text-right">
                                         <button id="send" type="submit" class="btn btn-success">Submit</button>
-                                        <a href="/orders" class="btn btn-primary">Cancel</a>
+                                        <a href="/refunds" class="btn btn-primary">Cancel</a>
                                     </div>
                                 </div>
                             {!! Form::close() !!}

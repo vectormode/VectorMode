@@ -10,6 +10,7 @@
             <div class="form-group">
                 <input class="form-control" name="customer_phone" type="text" value="01676290850">
                 <input class="form-control" name="customer_address" type="text" value="lifjaslfhasl">
+                <input class="form-control" name="order_id" type="text" value="1">
             </div>
         </div>
     </div>

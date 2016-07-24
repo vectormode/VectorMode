@@ -25,10 +25,22 @@
             <li><a><i class="fa fa-home"></i> Dashboard <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu" style="display: none">
                     <li>
-                        <a href="{{ URL::route('products.index') }}">Products</a>
+                        <a href="{{ URL::route('orders.index') }}">Orders</a>
                     </li>
                     <li>
-                        <a href="{{ URL::route('orders.index') }}">Orders</a>
+                        <a href="{{ URL::route('refunds.index') }}">Refunds</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="menu_section">
+        <h3>Other Inputs</h3>
+        <ul class="nav side-menu">
+            <li><a><i class="fa fa-home"></i> Generic Items <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu" style="display: none">
+                    <li>
+                        <a href="{{ URL::route('products.index') }}">Products</a>
                     </li>
                     <li>
                         <a href="{{ URL::route('customers.index') }}">Customers</a>
@@ -44,12 +56,6 @@
                     </li>
                 </ul>
             </li>
-        </ul>
-    </div>
-    <div class="menu_section">
-        <h3>Others</h3>
-        <ul class="nav side-menu">
-
         </ul>
     </div>
 

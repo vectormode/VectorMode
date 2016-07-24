@@ -11,7 +11,16 @@
 
                         <div class="x_content">
                             {!! Form::open(['url'=>'/orders','class'=>'form-horizontal form-label-left']) !!}
+
                                 @include('partials._order_form')
+
+                                <div class="ln_solid"></div>
+                                <div class="form-group">
+                                    <div class="col-md-12 text-right">
+                                        <button id="send" type="submit" class="btn btn-success">Submit</button>
+                                        <a href="/orders" class="btn btn-primary">Cancel</a>
+                                    </div>
+                                </div>
                             {!! Form::close() !!}
                         </div>
                     </div>
