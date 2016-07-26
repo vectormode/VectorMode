@@ -6,20 +6,11 @@ php:
   - 5.5
   - nightly
 
-matrix:
-  fast_finish: true
-  allow_failures:
-    - php: nightly
-
-cache:
-  apt: true
-  directories:
-    - $HOME/.composer/cache
-    - vendor
-
-before_install:
-  - phpenv config-rm xdebug.ini
+before_script:
+  - cp .env.travis .env
+  - mysql -e 'create database homestead_test;'
   - composer self-update
+  - composer install --no-interaction
 
-install:
-  - composer install -o --prefer-dist --no-interaction
+script:
+  - vendor/bin/phpunit
