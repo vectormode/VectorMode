@@ -3,19 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="aa4bf255-2eda-4525-adec-9fcf53fd4c10" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/bottom.js" afterPath="$PROJECT_DIR$/public/js/bottom.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/bottom.js.map" afterPath="$PROJECT_DIR$/public/js/bottom.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.md" afterPath="$PROJECT_DIR$/readme.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/custom.js" afterPath="$PROJECT_DIR$/resources/assets/js/custom.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/orders/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/orders/create.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/orders/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/orders/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/partials/_order_form.php" afterPath="$PROJECT_DIR$/resources/views/partials/_order_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/partials/_refund_form.php" afterPath="$PROJECT_DIR$/resources/views/partials/_refund_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/partials/_sidebar.blade.php" afterPath="$PROJECT_DIR$/resources/views/partials/_sidebar.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/refunds/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/refunds/create.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/refunds/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/refunds/index.blade.php" />
     </list>
     <ignored path="vectormode.app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,16 +25,16 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/readme.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+          <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="189">
-                <caret line="7" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+              <first_editor relative-caret-position="221">
+                <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
             </state>
           </provider>
-          <provider editor-type-id="MarkdownFxPreviewEditor">
+          <provider selected="true" editor-type-id="MarkdownFxPreviewEditor">
             <state />
           </provider>
         </entry>
@@ -192,7 +180,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -267,6 +254,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -382,11 +370,14 @@
       <workItem from="1469190790508" duration="377000" />
       <workItem from="1469248970789" duration="1990000" />
       <workItem from="1469263775342" duration="15000" />
+      <workItem from="1469681970955" duration="1133000" />
+      <workItem from="1469717059993" duration="598000" />
+      <workItem from="1469721354106" duration="3751000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108220000" />
+    <option name="totallyTimeSpent" value="113702000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -759,16 +750,16 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+      <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="189">
-            <caret line="7" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <first_editor relative-caret-position="221">
+            <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
-      <provider editor-type-id="MarkdownFxPreviewEditor">
+      <provider selected="true" editor-type-id="MarkdownFxPreviewEditor">
         <state />
       </provider>
     </entry>
