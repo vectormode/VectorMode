@@ -2,7 +2,7 @@
   <img src="https://raw.githubusercontent.com/rnaby/VectorMode/master/public/images/vectormode.png" alt="Sublime's custom image"/>
 </p>
 
-# VectorMode
+# VectorMode<sup>®</sup>
 
 [![Build Status](https://travis-ci.org/rnaby/VectorMode.svg?branch=master)](https://travis-ci.org/rnaby/VectorMode)
 
@@ -72,12 +72,12 @@ Now go to your favourite browser and try to access the software through that bro
 
 ## Contributing
 All contributors are welcome!  
-For information on how contribute to VectorMode, please contact me at naby88@gmail.com.
+For information on how contribute to VectorMode<sup>®</sup>, please contact me at naby88@gmail.com.
 
 ## Donation
 Any kinds of donations are welcome!  
-For information on how donate to VectorMode, please contact me at naby88@gmail.com.
+For information on how donate to VectorMode<sup>®</sup>, please contact me at naby88@gmail.com.
 
 ## License
-VectorMode is released under the Attribution Assurance License.  
+VectorMode<sup>®</sup> is released under the Attribution Assurance License.  
 See [LICENSE](LICENSE) for details.
