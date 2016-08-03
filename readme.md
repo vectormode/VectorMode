@@ -69,6 +69,7 @@ Now go to your favourite browser and try to access the software through that bro
 * Partial payments
 * Due management
 * Supplier management
+* Auto DB backup(Right now for Sqlite only)
 
 ## Contributing
 All contributors are welcome!  
