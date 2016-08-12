@@ -59,10 +59,13 @@ Now go to your favourite browser and try to access the software through that bro
 ## Built With
 * Laravel Framework
 * Vue.js
+* [dataTable](https://datatables.net/)
+* [iCheck](http://icheck.fronteed.com/)
 * Database as MySQL or SqLite
 * Sweetalert Library
 * Twitter Bootstrap Frontend Framework
 * [gentelella](https://github.com/puikinsh/gentelella) Admin Template
+* [domPDF](https://dompdf.github.io/)
 
 ## Features
 * Built using Laravel 5.2
