@@ -8,7 +8,7 @@
 
 ## [Localhost](https://github.com/rnaby/VectorMode) | [Server Host](https://github.com/rnaby/VectorMode)
 
-Right now I'll suggest you to host this application on your localhost. In future I'll release a web host version. This application will also run smoothly on server also, but it is not recommended. For any support or assistance please email  me naby88@gmail.com.
+Right now I'll suggest you to host this application on your localhost. In future I'll release a web host version. This application will also run smoothly on server, but it is not recommended. For any support or assistance please email  me naby88@gmail.com.
 
 ## Description
 It is a point of sale (POS) software. With this piece of software you can manage your product sales data easily. I've written this for one of my friends business. I've planned this software as a big system and made it modular. So in future if anyone wants to add more functionality to this system he/she can easily do it.
