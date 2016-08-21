@@ -6,10 +6,10 @@
   },
   "devDependencies": {
     "gulp": "^3.9.1",
-    "laravel-elixir": "^5.0.0",
-    "bootstrap-sass": "^3.0.0"
+    "laravel-elixir": "^5.0.0"
   },
   "dependencies": {
+    "bootstrap-sass": "^3.0.0",
     "accounting": "^0.4.1",
     "datatables": "^1.10.12",
     "datatables-tabletools": "^2.2.2",
