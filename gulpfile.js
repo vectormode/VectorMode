@@ -16,7 +16,7 @@ elixir.extend('sourcemaps', false);
 elixir(function(mix) {
     mix.sass('app.scss');
     mix.scripts([
-		'/../../../node_modules/jquery/dist/jquery.min.js',
+		'/../../../node_modules/jquery/dist/jquery.js',
 		'/../../../node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js',
 		'/../../../node_modules/sweetalert/dist/sweetalert.min.js',
 		'/../../../node_modules/jquery-ui-bundle/jquery-ui.min.js'
@@ -31,8 +31,8 @@ elixir(function(mix) {
 		'/../../../node_modules/daterangepicker/daterangepicker.min.js',
 		'/../../../node_modules/select2/dist/js/select2.min.js',
 		'/../../../node_modules/accounting/accounting.min.js',
-		// '/../../../node_modules/vue-sortable',
+		'/../../../node_modules/sortablejs/Sortable.min.js',
 		'/../../../node_modules/vue/dist/vue.js',
-		'custom.js',
+		'app.js',
     ], 'public/js/bottom.js');
 });

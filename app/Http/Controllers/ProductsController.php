@@ -15,9 +15,12 @@ class ProductsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $products = Product::all();
+        if($request->ajax()){
+            return $products;
+        }
         return view('products.index', compact('products', 'products'));
     }
 

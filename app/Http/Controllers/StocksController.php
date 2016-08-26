@@ -19,9 +19,12 @@ class StocksController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $stocks = Stock::with('store_details', 'supplier_details', 'product_details')->get();
+        if($request->ajax()){
+            return $stocks;
+        }
         return view('stocks.index', compact('stocks', 'stocks'));
     }
 

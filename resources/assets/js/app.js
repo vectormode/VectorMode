@@ -420,8 +420,6 @@ $(document).ready(function () {
 /** ******  /scrollview  *********************** **/
 
 
-import Sortable from 'vue-sortable';
-
 Vue.filter('currencyDisplay', {
     // model -> view
     read: function (val) {
@@ -462,17 +460,35 @@ Vue.directive('sortable', {
 });
 
 var vm = new Vue({
-    el: '#app',
+    el: '#vectormode-order-table',
     data: {
         rows: [
             //initial data
-            {qty: 5, description: "Something", price: 55.20, tax: 10},
-            {qty: 2, description: "Something else", price: 1255.20, tax: 20},
+            {
+                qty: 5,
+                price: '',
+                tax: 10
+            }
         ],
+        products: [],
         total: 0,
         grandtotal: 0,
         taxtotal: 0,
-        delivery: 40
+        delivery: 40,
+    },
+    ready: function () {
+        var self = this;
+        $.ajax({
+            context: this,
+            type: "GET",
+            url: "/stocks",
+            success: function (data) {
+                self.products = data;
+            },
+            error: function (error) {
+                alert(JSON.stringify(error));
+            }
+        });
     },
     computed: {
         total: function () {
@@ -493,28 +509,14 @@ var vm = new Vue({
     methods: {
         addRow: function (index) {
             try {
-                this.rows.splice(index + 1, 0, {});
+                this.rows.push({});
             } catch(e)
             {
                 console.log(e);
             }
         },
-        removeRow: function (index) {
-            this.rows.splice(index, 1);
-        },
-        getData: function () {
-            $.ajax({
-                context: this,
-                type: "POST",
-                data: {
-                    rows: this.rows,
-                    total: this.total,
-                    delivery: this.delivery,
-                    taxtotal: this.taxtotal,
-                    grandtotal: this.grandtotal,
-                },
-                url: "/api/data"
-            });
+        removeRow: function (row) {
+            this.rows.$remove(row);
         }
     }
 });
