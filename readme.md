@@ -83,7 +83,7 @@ Now go to your favourite browser and try to access the software through that bro
 * Auto DB backup(Right now for Sqlite only)
 
 ## Queries 
-For any further query on **VectorMode<sup>®</sup>**, please create an issue. We will discuss the topic there. I'll not answer any email on query. Email communication is only for **Contribution** and **Donation**
+For any further query on **VectorMode<sup>®</sup>**, please create an issue. We will discuss the topic there. I'll not answer any email on query. Email communication is only for **Contribution**, **Donation** and **Documentation.**
 
 ## Contributing
 All contributors are welcome!  
