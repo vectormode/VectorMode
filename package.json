@@ -9,11 +9,13 @@
     "laravel-elixir": "^5.0.0"
   },
   "dependencies": {
+    "animate.scss": "0.0.6",
     "accounting": "^0.4.1",
     "bootstrap-sass": "^3.0.0",
     "datatables": "^1.10.12",
     "datatables-tabletools": "^2.2.2",
     "daterangepicker": "0.0.3",
+    "font-awesome": "^4.6.3",
     "icheck": "^1.0.2",
     "jquery": "^2.2.4",
     "jquery-ui-bundle": "^1.11.4",
