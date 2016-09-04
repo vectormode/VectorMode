@@ -15813,14 +15813,9 @@ var vm = new Vue({
             //initial data
             {
                 qty: 5,
-                price: 55.20,
+                price: '',
                 tax: 10
-            },
-            {
-                qty: 2,
-                price: 1255.20,
-                tax: 20
-            },
+            }
         ],
         products: [],
         total: 0,
