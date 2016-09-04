@@ -26,13 +26,13 @@ elixir(function(mix) {
 		'/../../../node_modules/icheck/icheck.min.js',
 		'/../../../node_modules/datatables/media/js/jquery.dataTables.min.js',
 		'/../../../node_modules/datatables-tabletools/js/dataTables.tableTools.js',
-		'/../../../node_modules/validator/validator.js',
 		'/../../../node_modules/moment/min/moment.min.js',
 		'/../../../node_modules/daterangepicker/daterangepicker.min.js',
 		'/../../../node_modules/select2/dist/js/select2.min.js',
 		'/../../../node_modules/accounting/accounting.min.js',
 		'/../../../node_modules/sortablejs/Sortable.min.js',
 		'/../../../node_modules/vue/dist/vue.js',
+		'validator.js',
 		'app.js',
     ], 'public/js/bottom.js');
 });
